@@ -1,13 +1,10 @@
-import { lightningCssTransform } from 'next/dist/build/swc/generated-native';
-import react from 'react'
-
 interface User {
     id: number,
     name: string
 }
 
 const UsersPage = async () => {
-    const res = await fetch('https://jsonplaceholder.typicode.com/users', { cache: 'no-store'});
+    const res = await fetch('https://jsonplaceholder.typicode.com/users', { cache: 'no-store' });
     const Users: User[] = await res.json();
     return (
         <>
